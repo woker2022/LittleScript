@@ -1,0 +1,30 @@
+// ==UserScript==
+// @name         Hightlight VIP in orderpally
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Hightlight VIP
+// @author       WhatsThePoint
+// @match        https://store.orderpally.com/admin/orders*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=orderpally.com
+// @grant        none
+// ==/UserScript==
+
+function addStyle(styleText){
+    let s = document.createElement('style')
+    s.appendChild(document.createTextNode(styleText))
+    document.getElementsByTagName('head')[0].appendChild(s)
+}
+
+addStyle ( `
+    .member--grade_name-kind-grade{
+    color:#FFFFFF !important;
+    background-color:#ffa35c !important;
+    }
+    .member--grade_name-kind-regular{
+    color: rgba(0, 0, 0, 0);
+    z-index:-100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+`);
