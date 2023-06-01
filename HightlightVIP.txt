@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Hightlight VIP
 // @author       WhatsThePoint
-// @match        https://store.orderpally.com/admin/orders*
+// @match        https://store.orderpally.com/admin/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=orderpally.com
 // @grant        none
 // ==/UserScript==
